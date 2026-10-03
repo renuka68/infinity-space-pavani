@@ -1,0 +1,511 @@
+/* =========================================================
+   INFINITY SPACE — COMPLETE CSS
+   ========================================================= */
+
+/* ---------- RESET ---------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #01030d;
+}
+
+/* ---------- BODY ---------- */
+
+body {
+  background: #01030d;
+  font-family: "Courier New", monospace;
+  color: #d8faff;
+}
+
+/* ---------- MAIN APP ---------- */
+
+.app {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(0, 80, 130, 0.08),
+      transparent 45%
+    ),
+    #01030d;
+}
+
+/* ---------- THREE.JS CANVAS ---------- */
+
+.app canvas {
+  position: absolute !important;
+  inset: 0;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  display: block;
+}
+
+/* =========================================================
+   HUD / INTERFACE
+   ========================================================= */
+
+.interface {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+
+  color: #a9f3ff;
+
+  font-family: "Courier New", monospace;
+
+  letter-spacing: 4px;
+
+  user-select: none;
+
+  z-index: 10;
+}
+
+/* =========================================================
+   TOP LEFT
+   ========================================================= */
+
+.top-left {
+  position: absolute;
+
+  top: 28px;
+  left: 32px;
+
+  display: flex;
+  align-items: center;
+
+  white-space: nowrap;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  letter-spacing: 5px;
+
+  color: #b9f7ff;
+
+  text-shadow:
+    0 0 5px rgba(0, 225, 255, 0.8),
+    0 0 15px rgba(0, 225, 255, 0.45),
+    0 0 30px rgba(0, 225, 255, 0.2);
+}
+
+/* =========================================================
+   TOP RIGHT
+   ========================================================= */
+
+.top-right {
+  position: absolute;
+
+  top: 28px;
+  right: 32px;
+
+  display: flex;
+  align-items: center;
+
+  white-space: nowrap;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  color: #b9f7ff;
+
+  text-shadow:
+    0 0 5px rgba(0, 225, 255, 0.8),
+    0 0 15px rgba(0, 225, 255, 0.4);
+}
+
+/* =========================================================
+   HUD LINES
+   ========================================================= */
+
+.line {
+  display: inline-block;
+
+  width: 54px;
+  height: 1px;
+
+  margin: 0 14px;
+
+  vertical-align: middle;
+
+  background: #51eaff;
+
+  box-shadow:
+    0 0 5px #00dfff,
+    0 0 12px rgba(0, 220, 255, 0.8),
+    0 0 25px rgba(0, 220, 255, 0.35);
+}
+
+/* =========================================================
+   CENTRAL IDENTITY
+   ========================================================= */
+
+.identity {
+  position: absolute;
+
+  left: 50%;
+  top: 72%;
+
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+
+  white-space: nowrap;
+
+  z-index: 20;
+
+  pointer-events: none;
+}
+
+/* ---------- NAME ---------- */
+
+.name {
+  font-family: "Courier New", monospace;
+
+  font-size: clamp(24px, 3vw, 38px);
+
+  font-weight: 500;
+
+  letter-spacing: 13px;
+
+  padding-left: 13px;
+
+  color: #dfffff;
+
+  text-shadow:
+    0 0 5px rgba(255, 255, 255, 0.8),
+    0 0 12px rgba(0, 225, 255, 0.8),
+    0 0 30px rgba(0, 180, 255, 0.45);
+}
+
+/* ---------- INFINITY CORE TEXT ---------- */
+
+.core {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 12px;
+
+  font-size: 11px;
+
+  letter-spacing: 5px;
+
+  color: #9cefff;
+
+  text-shadow:
+    0 0 7px rgba(0, 220, 255, 0.9),
+    0 0 18px rgba(0, 200, 255, 0.4);
+}
+
+.core .line {
+  width: 45px;
+
+  margin: 0 10px;
+}
+
+/* =========================================================
+   BOTTOM LEFT
+   ========================================================= */
+
+.bottom-left {
+  position: absolute;
+
+  left: 32px;
+  bottom: 24px;
+
+  display: flex;
+  align-items: center;
+
+  white-space: nowrap;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  color: #9fefff;
+
+  text-shadow:
+    0 0 6px rgba(0, 210, 255, 0.8),
+    0 0 15px rgba(0, 210, 255, 0.35);
+}
+
+.bottom-left .line {
+  width: 54px;
+}
+
+/* =========================================================
+   BOTTOM RIGHT
+   ========================================================= */
+
+.bottom-right {
+  position: absolute;
+
+  right: 32px;
+  bottom: 24px;
+
+  display: flex;
+  align-items: center;
+
+  white-space: nowrap;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  color: #9fefff;
+
+  text-shadow:
+    0 0 6px rgba(0, 210, 255, 0.8),
+    0 0 15px rgba(0, 210, 255, 0.35);
+}
+
+/* =========================================================
+   ONLINE DOT
+   ========================================================= */
+
+.bottom-right i {
+  display: inline-block;
+
+  width: 9px;
+  height: 9px;
+
+  margin-right: 10px;
+
+  border-radius: 50%;
+
+  background: #00ecff;
+
+  box-shadow:
+    0 0 5px #00ecff,
+    0 0 12px #00ecff,
+    0 0 25px rgba(0, 236, 255, 0.8);
+
+  animation: onlinePulse 2s ease-in-out infinite;
+}
+
+/* =========================================================
+   ONLINE ANIMATION
+   ========================================================= */
+
+@keyframes onlinePulse {
+  0% {
+    opacity: 0.55;
+
+    transform: scale(0.85);
+
+    box-shadow:
+      0 0 5px #00ecff,
+      0 0 10px #00ecff;
+  }
+
+  50% {
+    opacity: 1;
+
+    transform: scale(1.15);
+
+    box-shadow:
+      0 0 7px #00ecff,
+      0 0 18px #00ecff,
+      0 0 30px rgba(0, 236, 255, 0.7);
+  }
+
+  100% {
+    opacity: 0.55;
+
+    transform: scale(0.85);
+
+    box-shadow:
+      0 0 5px #00ecff,
+      0 0 10px #00ecff;
+  }
+}
+
+/* =========================================================
+   SUBTLE SCREEN VIGNETTE
+   ========================================================= */
+
+.app::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  z-index: 5;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      transparent 50%,
+      rgba(0, 0, 15, 0.18) 75%,
+      rgba(0, 0, 10, 0.45) 100%
+    );
+}
+
+/* =========================================================
+   RESPONSIVE — LAPTOP
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .top-left {
+    left: 20px;
+    top: 20px;
+
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .top-right {
+    right: 20px;
+    top: 20px;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .bottom-left {
+    left: 20px;
+    bottom: 18px;
+
+    font-size: 9px;
+    letter-spacing: 3px;
+  }
+
+  .bottom-right {
+    right: 20px;
+    bottom: 18px;
+
+    font-size: 9px;
+    letter-spacing: 3px;
+  }
+
+  .identity {
+    top: 74%;
+  }
+
+  .name {
+    font-size: 26px;
+    letter-spacing: 9px;
+    padding-left: 9px;
+  }
+
+  .core {
+    font-size: 9px;
+    letter-spacing: 4px;
+  }
+
+  .line {
+    width: 40px;
+    margin: 0 8px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .top-left {
+    left: 14px;
+    top: 15px;
+
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+
+  .top-right {
+    right: 14px;
+    top: 15px;
+
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .top-left .line,
+  .top-right .line {
+    width: 25px;
+    margin: 0 6px;
+  }
+
+  .identity {
+    top: 76%;
+  }
+
+  .name {
+    font-size: 21px;
+
+    letter-spacing: 7px;
+
+    padding-left: 7px;
+  }
+
+  .core {
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+
+  .core .line {
+    width: 25px;
+    margin: 0 6px;
+  }
+
+  .bottom-left {
+    left: 14px;
+    bottom: 15px;
+
+    font-size: 7px;
+    letter-spacing: 2px;
+  }
+
+  .bottom-right {
+    right: 14px;
+    bottom: 15px;
+
+    font-size: 7px;
+    letter-spacing: 2px;
+  }
+
+  .bottom-left .line,
+  .bottom-right .line {
+    width: 25px;
+    margin: 0 6px;
+  }
+
+  .bottom-right i {
+    width: 6px;
+    height: 6px;
+    margin-right: 6px;
+  }
+}
